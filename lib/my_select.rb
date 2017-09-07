@@ -1,3 +1,11 @@
 def my_select(collection)
  # your code here!
-end
+
+   new_array = []
+   i = 0
+   while i < collection.length
+     new_array << yield(collection[i])
+     i = i + 1
+   end
+   collection.select { |num|  num.even?  }
+ end
